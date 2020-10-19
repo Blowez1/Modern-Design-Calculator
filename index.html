@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <!--MAIN CSS-->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!--BOOSTRAP CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="calculator">
+            <div class="row m-0">
+                <div class="col-12">
+                    <div class="calculator-display">
+                        <input class="calculator-value" autofocus placeholder="0" id="calculator-value" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="row m-0">
+                <div class="col-3">
+                    <button class="btn btn-block operator" value="+">+</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-block operator" value="-">-</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-block operator" value="*">&times</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-block operator" value="/">÷</button>
+                </div>
+            </div>
+            <div class="row m-0">
+                <div class="col-9">
+                    <div class="row m-0">
+                        <div class="col-4"><button class="btn btn-block number" value="7">7</button></div>
+                        <div class="col-4"><button class="btn btn-block number" value="8">8</button></div>
+                        <div class="col-4"><button class="btn btn-block number" value="9">9</button></div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-4"><button class="btn btn-block number" value="4">4</button></div>
+                        <div class="col-4"><button class="btn btn-block number" value="5">5</button></div>
+                        <div class="col-4"><button class="btn btn-block number" value="6">6</button></div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-4"><button class="btn btn-block number" value="1">1</button></div>
+                        <div class="col-4"><button class="btn btn-block number" value="2">2</button></div>
+                        <div class="col-4"><button class="btn btn-block number" value="3">3</button></div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="col-4"><button class="btn btn-block number" value="0">0</button></div>
+                        <div class="col-4"><button class="btn btn-block" value=".">.</button></div>
+                        <div class="col-4"><button class="btn btn-block" value="C" id="display-clean">C</button></div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-block h-100" value="=" id="calc">=</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <h4 class="signature">Made by Blowez</h4>
+    <script src="js/main.js"></script>
+    
+</body>
+
+</html>
