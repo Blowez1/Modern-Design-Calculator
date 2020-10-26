@@ -33,33 +33,38 @@
         margin: 0 !important;
     }
 
-    button {
-        color: #fff;
-        text-align: center;
-        height: 50px;
-        border: .5px solid #e2e2e282;
-        margin: 0 !important;
-        font-size: 20px;
-        font-weight: 200;
-        background-color: #3c3938;
-        border-radius: 0;
-        align-items: center;
-        transition: 600ms all;
-
-        &:focus {
-            box-shadow: none;
+    .row {
+        button {
+            color: #fff;
+            text-align: center;
+            height: 50px;
+            border: .5px solid #e2e2e282;
+            margin: 0 !important;
+            font-size: 20px;
+            font-weight: 200;
+            background-color: #3c3938;
+            border-radius: 0;
+            align-items: center;
+            transition: 600ms all;
+    
+            &:focus {
+                box-shadow: none;
+            }
+    
+            &:hover {
+                background-color: lighten(#3c3938, 35%);
+                color: darken(#3c3938, 20%)
+            }
+    
+            &:active {
+                background-color: lighten(#3c3938, 35%);
+                color: #3c3938;
+            }
         }
 
-        &:hover {
-            background-color: lighten(#3c3938, 35%);
-            color: darken(#3c3938, 20%)
-        }
-
-        &:active {
-            background-color: lighten(#3c3938, 35%);
-            color: #3c3938;
-        }
     }
+    
+
 }
 
 .signature {
@@ -94,7 +99,7 @@
 
         i {
             color: #fff;
-            
+
         }
 
         .historys {
@@ -126,23 +131,43 @@
         transition: 500ms all;
         overflow-y: scroll;
 
-        .history-element {
+        #history-element-calc {
             display: inline-block;
             padding: 4px;
             border: 2px solid lighten(#3c3938, 60%);
             border-radius: 7px;
             margin: 6px 6px 0 0;
-            
+
 
             &:nth-child(1) {
                 margin-top: 0px !important;
             }
-           
+
 
             &:hover {
                 background-color: #3c3938;
                 color: #fff;
             }
         }
+
+        #history-element-result {
+            display: inline-block;
+            padding: 4px;
+            border: 2px solid lighten(#3c3938, 60%);
+            border-radius: 7px;
+            margin: 6px 6px 0 0;
+
+
+            &:nth-child(1) {
+                margin-top: 0px !important;
+            }
+
+
+            &:hover {
+                background-color: #3c3938;
+                color: #fff;
+            }
+        }
+
     }
 }

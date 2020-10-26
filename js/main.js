@@ -4,7 +4,8 @@ let display = document.getElementById("calculator-value");
 let calculator = document.getElementById("calc");
 let cleaner = document.getElementById("display-clean");
 let historys = document.getElementById("element");
-
+let deneme = document.getElementById("history-element-calc");
+let result = document.getElementById("history-element-result");
 function print() {
     display.value = display.value + this.value;
 }
@@ -22,7 +23,7 @@ calculator.addEventListener("click", calculate)
 function calculate() {
     if (display.value != "") {
 
-        historys.innerHTML += "<li class='history-element d-inline-block'>" + display.value + " = " + eval(display.value) + "</li>";
+        historys.innerHTML += "<li><div><button id='history-element-calc' class='d-inline-block'>" + display.value + "</button>" + "=  " + "<button id='history-element-result' class='d-inline-block'>" + eval(display.value) + "</button></div>" + "</li>";
         display.value = eval(display.value);
 
     }
@@ -38,5 +39,14 @@ window.onkeydown = function (buttonenter) {
 cleaner.addEventListener("click", clean);
 
 function clean() {
+    display.value = "";
+}
+
+
+
+deneme.addEventListener("click", printcal);
+
+
+function printcal() {
     display.value = "";
 }
