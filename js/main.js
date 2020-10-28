@@ -4,8 +4,10 @@ let display = document.getElementById("calculator-value");
 let calculator = document.getElementById("calc");
 let cleaner = document.getElementById("display-clean");
 let historys = document.getElementById("element");
-let deneme = document.getElementById("history-element-calc");
+let history_element= document.getElementsByClassName("history-element-calc");
 let result = document.getElementById("history-element-result");
+
+
 function print() {
     display.value = display.value + this.value;
 }
@@ -22,8 +24,7 @@ calculator.addEventListener("click", calculate)
 
 function calculate() {
     if (display.value != "") {
-
-        historys.innerHTML += "<li><div><button id='history-element-calc' class='d-inline-block'>" + display.value + "</button>" + "=  " + "<button id='history-element-result' class='d-inline-block'>" + eval(display.value) + "</button></div>" + "</li>";
+        historys.innerHTML += "<li><div><input type='button' onmouseover='historystart()' class='history-element-calc' value='" + display.value + "'></input>" + "=  " + "<input type='button' onmouseover='historystart()' class='history-element-calc'  value='" + eval(display.value) + "'></input></div>" + "</li>";
         display.value = eval(display.value);
 
     }
@@ -43,10 +44,83 @@ function clean() {
 }
 
 
+function historystart(){
 
-deneme.addEventListener("click", printcal);
+    for (let index = 0; index < history_element.length; index++) {
+        history_element[index].addEventListener('click',function (){  display.value=this.value});
+    }
 
+}
 
-function printcal() {
-    display.value = "";
+window.onkeydown=function(tusbas){
+
+    if (tusbas.keyCode==13) {
+  
+            document.getElementById("esittusu").click();
+    }
+
+    else if (tusbas.keyCode==96 ||tusbas.keyCode==48) {
+        
+        numbers[0].click();
+    }
+
+    else if (tusbas.keyCode==97 || tusbas.keyCode==49) {
+        numbers[2].click();
+    }
+
+    else if (tusbas.keyCode==98 || tusbas.keyCode==50) {
+        numbers[6].click();
+    }
+
+    else if (tusbas.keyCode==99 || tusbas.keyCode==51) {
+        numbers[10].click();
+    }
+
+    else if (tusbas.keyCode==100 || tusbas.keyCode==52) {
+        numbers[1].click();
+    }
+
+    else if (tusbas.keyCode==101 || tusbas.keyCode==53) {
+        numbers[5].click();
+    }
+
+    else if (tusbas.keyCode==102 || tusbas.keyCode==54) {
+        numbers[9].click();
+    }
+
+    else if (tusbas.keyCode==103 || tusbas.keyCode==55) {
+        numbers[0].click();
+    }
+
+    else if (tusbas.keyCode==104 || tusbas.keyCode==56) {
+        numbers[4].click();
+    }
+
+    else if (tusbas.keyCode==105 || tusbas.keyCode==57) {
+        numbers[8].click();
+    }
+    else if (tusbas.keyCode==110) {
+        numbers[7].click();
+    }
+
+    else if (tusbas.keyCode==107) {
+        operators[0].click();
+    }
+
+    else if (tusbas.keyCode==109) {
+        operators[1].click();
+    }
+
+    else if (tusbas.keyCode==106) {
+        operators[2].click();
+    }
+
+    else if (tusbas.keyCode==111) {
+        operators[3].click();
+    }
+
+    else if (tusbas.keyCode==27) {
+        cleaner.click();
+    }
+    
 }

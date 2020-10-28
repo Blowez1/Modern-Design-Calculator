@@ -134,7 +134,7 @@
   overflow-y: scroll;
 }
 
-#history .historys #history-element-calc {
+#history .historys .history-element-calc {
   display: inline-block;
   padding: 4px;
   border: 2px solid #d5d2d1;
@@ -142,28 +142,11 @@
   margin: 6px 6px 0 0;
 }
 
-#history .historys #history-element-calc:nth-child(1) {
+#history .historys .history-element-calc:nth-child(1) {
   margin-top: 0px !important;
 }
 
-#history .historys #history-element-calc:hover {
-  background-color: #3c3938;
-  color: #fff;
-}
-
-#history .historys #history-element-result {
-  display: inline-block;
-  padding: 4px;
-  border: 2px solid #d5d2d1;
-  border-radius: 7px;
-  margin: 6px 6px 0 0;
-}
-
-#history .historys #history-element-result:nth-child(1) {
-  margin-top: 0px !important;
-}
-
-#history .historys #history-element-result:hover {
+#history .historys .history-element-calc:hover {
   background-color: #3c3938;
   color: #fff;
 }
